@@ -3,15 +3,15 @@ var router = express.Router();
 
 /* GET users listing. */
 router.post('/count_health', function(req, res, next) {
-  const params = req.body["action"]
-
+  const params = req.body["action"]["parameters"]
+    
   res.json({
-    version: "2.0",
-    resultCode: "OK",
-    output: {
-      count_result: params
-    }
-});
+      version: "2.0",
+      resultCode: "OK",
+      output: {
+        count_result: params
+      }
+  })
 })
 
 router.get('/', function(req, res, next) {
