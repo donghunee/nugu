@@ -7,7 +7,7 @@ router.post('/count_health', function(req, res, next) {
     version: "2.0",
     resultCode: "OK",
     output: {
-      timer_result: "오늘"
+      count_result: "오늘"
     }
 });
 })
