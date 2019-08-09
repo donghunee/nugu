@@ -4,12 +4,12 @@ var router = express.Router();
 /* GET users listing. */
 router.post('/count_health', function(req, res, next) {
   const params = req.body["action"]["parameters"]["count"].value.toString()
-    
+  result = timer(params)
   res.json({
       version: "2.0",
       resultCode: "OK",
       output: {
-        count_result: params
+        count_result: result
       }
   })
 })
@@ -32,5 +32,14 @@ router.post('/start', function(req, res, next) {
   })
 
 });
+
+var result =""
+
+timer = (time) => {
+  for(var i=1;t<=time;i++){
+    result.concat("요시요시")
+  }
+  return result
+}
 
 module.exports = router;
