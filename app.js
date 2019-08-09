@@ -17,17 +17,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/timer', require('./routes/timer'));
-app.use('/count', require('./routes/count'));
+app.use('/', require('./routes/health'));
+// app.use('/count', require('./routes/count'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
 
-app.listen(8000,function(){
-  console.log("server running")
-})
+// app.listen(8000,function(){
+//   console.log("server running")
+// })
 
 // error handler
 app.use(function(err, req, res, next) {
