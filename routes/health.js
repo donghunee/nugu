@@ -4,9 +4,12 @@ var router = express.Router();
 /* GET users listing. */
 router.post('/count_health', function(req, res, next) {
   res.json({
-    data: req.body
-  })
-});
+    version: "2.0",
+    resultCode: "OK",
+    output: {
+      timer_result: "오늘"
+    }
+})
 
 router.get('/', function(req, res, next) {
   
@@ -23,7 +26,6 @@ router.post('/start', function(req, res, next) {
   res.json({
     data: req.body
   })
-  
 
 });
 
