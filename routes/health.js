@@ -3,8 +3,8 @@ var router = express.Router();
 
 /* GET users listing. */
 router.post('/count_health', function(req, res, next) {
-  const params = req.body.action.parameters.count.value
-  
+  const params = req.body["action"]
+
   res.json({
     version: "2.0",
     resultCode: "OK",
