@@ -9,6 +9,7 @@ router.post('/count_health', function(req, res, next) {
     output: {
       timer_result: "오늘"
     }
+});
 })
 
 router.get('/', function(req, res, next) {
