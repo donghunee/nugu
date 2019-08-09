@@ -12,6 +12,15 @@ router.get('/', function(req, res, next) {
   
     res.render('index', { title: 'Express' });
   
-  });
+});
+
+
+router.get('/start', function(req, res, next) {
+  res.json({
+    data: req.body
+  })
+  
+
+});
 
 module.exports = router;
