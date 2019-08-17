@@ -68,7 +68,11 @@ const timer = (time) => {
   var result =""
   for(var i=1;i<=time;i++){
     result += i
-    result += '<pause time="700"/>'
+    if(i>10){
+      result += '<pause time="600"/>'
+    }else{
+      result += '<pause time="800"/>'
+    }
   }
   return result
 }
