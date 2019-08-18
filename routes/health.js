@@ -67,7 +67,7 @@ router.post('/start', function(req, res, next) {
 const timer = (time) => {
   var result =""
   for(var i=1;i<=time;i++){
-    result += i
+    result +=i 
     if(i>10){
       result += '<pause time="600"/>'
     }else{
